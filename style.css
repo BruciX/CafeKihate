@@ -7,6 +7,7 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    transition: all .25s;
 }
 
 button {
@@ -17,7 +18,7 @@ button {
 :root {
     --color-pri: #a20a0a;
     --color-seg: #d65722;
-    --sombra: #2e0f0e;
+    --sombra: rgb(46, 15, 14);
     --letra: #f2dada;
     --letra-seg: #bb9944;
     --fondo: #3d261c;
@@ -71,7 +72,7 @@ img {
 }
 
 .logo img {
-    height: 1.7rem;
+    height: 1.6rem;
 }
 
 .despliegue {
@@ -87,7 +88,7 @@ img {
 }
 
 .icon {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     color: var(--letra);
     transition: transform .5s;
     -webkit-transition: transform .5s;
@@ -128,6 +129,7 @@ img {
 .nav__item i,
 .dark {
     font-size: 1.5rem;
+    cursor: pointer;
 }
 
 /* Inicio */
@@ -323,6 +325,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: 1rem;
 }
 
 .nosotros__acordeon-item {
@@ -343,9 +346,36 @@ img {
     color: var(--color-pri);
 }
 
-.nosotros__acordeon-descripcion {
+.nosotros__acordeon-contenido {
     overflow: hidden;
     height: 0;
+
+}
+
+.nosotros__acordeon-descripcion {
+    padding-top: 1rem;
+    text-align: justify;
+}
+
+/* abrir los items */
+
+.abrir-acordeon {
+    box-shadow: 0 4px 15px var(--sombra);
+}
+
+.abrir-acordeon .nosotros__acordeon-encabezado {
+    border-bottom: 1px solid var(--color-pri);
+    box-shadow: 0 2px 4px var(--sombra);
+    padding: 0.5rem;
+}
+
+.abrir-acordeon .nosotros__acordeon-flecha i,
+.abrir-acordeon .nosotros__acordeon-icon {
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
 }
 
 .contacto__card {
@@ -396,7 +426,7 @@ img {
 }
 
 .pie_de_pagina {
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
 }
 
 .footer__contenido {
@@ -449,4 +479,64 @@ img {
 .footer__copy {
     font-size: 0.75rem;
     color: var(--sombra);
+}
+
+/* tema oscuro */
+
+.temaOscuro .inicio {
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(46, 15, 14, 1)), url(/img/plantacionCafe.png);
+    background-position: top;
+    background-size: cover;
+}
+
+.temaOscuro .productos,
+.temaOscuro .nosotros,
+.temaOscuro .contacto,
+.temaOscuro .pie_de_pagina {
+    background-color: var(--sombra);
+}
+
+.temaOscuro .descripcion,
+.temaOscuro .inicio_valor_dato,
+.temaOscuro .seccion__subtitulo,
+.temaOscuro .footer__privacidad a,
+.temaOscuro .footer__copy,
+.temaOscuro .seccion__descripcion,
+.temaOscuro .contacto__card-descripcion {
+    color: var(--letra);
+}
+
+.temaOscuro .seccion__titulo {
+    color: var(--letra-seg);
+}
+
+.temaOscuro .producto__card {
+    background-color: var(--fondo);
+}
+
+.temaOscuro .comprar,
+.temaOscuro .nosotros__adorno,
+.temaOscuro .contacto__adorno {
+    background-color: var(--letra-seg);
+    color: var(--color-pri);
+}
+.temaOscuro .abrir-acordeon{
+    box-shadow: 0 4px 15px var(--letra-seg);
+}
+
+.temaOscuro .nosotros__acordeon-item, .temaOscuro .contacto__card-box {
+    border: 2px solid var(--letra-seg);
+}
+
+.temaOscuro .nosotros__acordeon-encabezado, .temaOscuro .contacto__card-titulo {
+    color: var(--letra-seg);
+}
+
+.temaOscuro .abrir-acordeon .nosotros__acordeon-encabezado {
+
+    border-bottom: 1px solid var(--letra-seg);
+    box-shadow: 0 2px 4px var(--letra-seg);
+}
+.temaOscuro .nosotros__acordeon-descripcion{
+    color: var(--letra);
 }
