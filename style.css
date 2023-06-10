@@ -8,6 +8,7 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     transition: all .25s;
+    border: none;
 }
 
 button {
@@ -137,7 +138,6 @@ img {
 .inicio {
     background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(/img/plantacionCafe.png);
     background-size: cover;
-    max-width: 1500px;
     background-position: top;
     display: flex;
 }
@@ -379,6 +379,7 @@ img {
 }
 
 .contacto__card {
+    padding-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -520,15 +521,18 @@ img {
     background-color: var(--letra-seg);
     color: var(--color-pri);
 }
-.temaOscuro .abrir-acordeon{
+
+.temaOscuro .abrir-acordeon {
     box-shadow: 0 4px 15px var(--letra-seg);
 }
 
-.temaOscuro .nosotros__acordeon-item, .temaOscuro .contacto__card-box {
+.temaOscuro .nosotros__acordeon-item,
+.temaOscuro .contacto__card-box {
     border: 2px solid var(--letra-seg);
 }
 
-.temaOscuro .nosotros__acordeon-encabezado, .temaOscuro .contacto__card-titulo {
+.temaOscuro .nosotros__acordeon-encabezado,
+.temaOscuro .contacto__card-titulo {
     color: var(--letra-seg);
 }
 
@@ -537,6 +541,162 @@ img {
     border-bottom: 1px solid var(--letra-seg);
     box-shadow: 0 2px 4px var(--letra-seg);
 }
-.temaOscuro .nosotros__acordeon-descripcion{
+
+.temaOscuro .nosotros__acordeon-descripcion {
     color: var(--letra);
+}
+
+/* responsivo a otros display */
+
+@media screen and (min-width:767px) {
+
+    /* REUZABLES */
+    .seccion__subtitulo {
+        color: var(--color-seg);
+        margin-bottom: -.8rem;
+    }
+
+    .seccion__titulo {
+        font-size: 2.2rem;
+        color: var(--color-pri);
+    }
+
+    img {
+        height: auto;
+    }
+
+    /* menu */
+    .logo img {
+        height: 2rem;
+    }
+
+    .nav__lista {
+        width: 20rem;
+    }
+
+    .nav__item i,
+    .dark {
+        font-size: 2rem;
+    }
+
+    /* INICIO */
+    .inicio__contenedor {
+        flex-direction: row;
+        width: 90%;
+        height: 80vh;
+    }
+
+    .img__imagen img {
+        height: 100%;
+    }
+
+    /* PRODUCTOS */
+    .cartilla {
+        flex-direction: row;
+        margin-top: 1rem;
+        gap: 2rem;
+    }
+
+    .producto__card {
+        width: 90%;
+    }
+
+    .producto__img {
+        padding: 1rem;
+    }
+
+    .nosotros,
+    .contacto,
+    .productos__contenedor {
+        padding: 1.5rem 0;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    /* reuzables */
+    .titulo {
+        font-size: 4rem;
+    }
+
+    .inicio_valor_titulo {
+        font-size: 2.2rem;
+    }
+
+    .descripcion,
+    .inicio_valor_dato {
+        font-size: 1.3rem;
+    }
+
+    .img__adorno {
+        width: 21rem;
+        height: 21rem;
+    }
+
+    .img__imagen {
+        height: 25rem;
+    }
+
+    .cartilla {
+        gap: 4rem;
+    }
+
+    .producto__card {
+        width: 20%;
+        justify-content: center;
+    }
+
+
+    /* nosotros */
+    .nosotros__contenido,
+    .contacto__contenedor {
+        flex-direction: row;
+    }
+
+    .nosotros__img,
+    .contacto__imagen {
+        width: 50%;
+    }
+
+    .nosotros__adorno,
+    .contacto__adorno {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        inset: 0;
+    }
+
+    .nosotros__datos,
+    .contacto__datos {
+        width: 50%;
+        margin: auto;
+    }
+
+    .contacto__card {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .contacto__card-box {
+        width: 45%;
+        padding: 1rem;
+    }
+
+    .contacto__card-info {
+        flex-direction: column;
+    }
+
+    .footer__contenido {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .footer__info {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
